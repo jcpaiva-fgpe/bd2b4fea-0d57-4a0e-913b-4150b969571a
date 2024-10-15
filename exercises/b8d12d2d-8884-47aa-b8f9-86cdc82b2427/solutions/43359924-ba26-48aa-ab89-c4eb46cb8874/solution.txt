@@ -1,0 +1,2 @@
+DELETE FROM departments
+WHERE MANAGER_ID IS NULL;
