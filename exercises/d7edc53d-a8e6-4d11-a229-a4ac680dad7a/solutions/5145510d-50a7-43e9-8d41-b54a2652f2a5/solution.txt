@@ -1,0 +1,10 @@
+UPDATE employees
+SET JOB_ID = 'ST_CLERK'
+WHERE JOB_ID = 'ST_MAN';
+
+UPDATE job_history
+SET JOB_ID = 'ST_CLERK'
+WHERE JOB_ID = 'ST_MAN';
+
+DELETE FROM jobs
+WHERE JOB_ID = 'ST_MAN';
