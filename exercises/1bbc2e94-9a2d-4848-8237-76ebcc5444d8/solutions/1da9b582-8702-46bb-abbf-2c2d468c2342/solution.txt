@@ -1,0 +1,22 @@
+UPDATE departments
+SET MANAGER_ID = (
+    SELECT EMPLOYEE_ID
+    FROM employees
+    WHERE MANAGER_ID = (
+        SELECT EMPLOYEE_ID
+        FROM employees
+        WHERE FIRST_NAME = 'Alexander' AND LAST_NAME = 'Hunold'
+    ) AND HIRE_DATE <= ALL (
+        SELECT HIRE_DATE
+        FROM employees
+        WHERE MANAGER_ID = (
+            SELECT EMPLOYEE_ID
+            FROM employees
+            WHERE FIRST_NAME = 'Alexander' AND LAST_NAME = 'Hunold'
+        )
+    )
+) WHERE MANAGER_ID = (
+        SELECT EMPLOYEE_ID
+        FROM employees
+        WHERE FIRST_NAME = 'Alexander' AND LAST_NAME = 'Hunold'
+);
