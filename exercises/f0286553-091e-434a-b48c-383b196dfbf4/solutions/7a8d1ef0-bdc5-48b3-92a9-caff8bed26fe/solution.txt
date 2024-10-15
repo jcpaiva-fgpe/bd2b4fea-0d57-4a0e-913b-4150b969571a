@@ -1,0 +1,2 @@
+INSERT INTO locations (LOCATION_ID, STREET_ADDRESS, CITY)
+VALUES (3300, 'C/Carlos III, 3', 'Cartagena');
