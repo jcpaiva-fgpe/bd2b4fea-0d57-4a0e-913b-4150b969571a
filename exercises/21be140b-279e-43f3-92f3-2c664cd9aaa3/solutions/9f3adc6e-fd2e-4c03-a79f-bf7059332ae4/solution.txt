@@ -1,0 +1,12 @@
+UPDATE departments
+SET LOCATION_ID =
+(
+    SELECT LOCATION_ID
+    FROM locations JOIN countries USING(COUNTRY_ID)
+    WHERE COUNTRY_NAME = 'China'
+)
+WHERE DEPARTMENT_ID = (
+    SELECT DEPARTMENT_ID
+    FROM departments
+    WHERE DEPARTMENT_NAME = 'IT'
+);
