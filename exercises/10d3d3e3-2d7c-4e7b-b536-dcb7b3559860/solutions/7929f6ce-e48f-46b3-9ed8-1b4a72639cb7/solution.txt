@@ -1,0 +1,3 @@
+UPDATE employees
+SET LAST_NAME = 'Toro', EMAIL = 'ATORO'
+WHERE LAST_NAME = 'Bull';
