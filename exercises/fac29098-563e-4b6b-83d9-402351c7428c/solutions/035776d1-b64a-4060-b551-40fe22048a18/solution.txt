@@ -1,0 +1,3 @@
+UPDATE employees
+SET HIRE_DATE = HIRE_DATE + interval '12 year'
+WHERE DEPARTMENT_ID = 60;
